@@ -35,8 +35,12 @@ class CaixaDaLanchonete {
         const [codigo, quantidade] = item.split(",");
         const menuItem = this.cardapio[codigo];
   
-        if (!menuItem) return "Item inválido!";
-        if (quantidade <= 0) return "Quantidade inválida!";
+        if (!menuItem) {
+          return "Item inválido!";
+        } 
+        if (quantidade <= 0) {
+          return "Quantidade inválida!";
+        }
   
         total += menuItem.valor * quantidade;
   
